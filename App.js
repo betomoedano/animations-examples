@@ -1,11 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Animated } from 'react-native';
+import { Btn } from './components/Btn';
+import { Sequence } from './components/Sequence';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Sequence>
+        <FontAwesome name="bell" size={50} color="gold" />
+      </Sequence>
+      <Btn title="Press me" />
     </View>
   );
 }
